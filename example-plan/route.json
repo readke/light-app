@@ -1,0 +1,26 @@
+{
+  "page": [
+    {
+      "path": "/",
+      "name": "index",
+      "component": "index.vue"
+    },
+    {
+      "path": "/test",
+      "name": "test",
+      "component": "test.vue"
+    },{
+      "path": "/detail",
+      "name": "detail",
+      "component": "detail.vue"
+    },{
+      "path": "/dange",
+      "name": "dange",
+      "component": "dange.vue"
+    },{
+      "path": "/add",
+      "name": "add",
+      "component": "add.vue"
+    }
+  ]
+}

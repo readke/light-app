@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget appId="example-base" appKey="0ddf3c5b6e8e43dc91b34993bc39b5b6"  version="1.0.0">
+<name>风险信息</name>
+    <content encoding="utf-8" src="index.html"/>
+    <statusbar color="#00000000"/>
+    <config desc="statusBar" type="STATUSBARSTYLE">
+        <permission platform="iOS" info="StatusBarStyle" value="Light"/>
+        <permission platform="iOS" info="StatusBarStyleIOS7" value="1"/>
+    </config>
+    <config desc="backgroundConfig" type="AUTHORITY">
+        <permission platform="iOS" info="backgroundMode" flag="1"/>
+        <permission platform="iOS" info="backgroundMode" flag="2"/>
+    </config>
+       <!-- </config> -->
+    <config type="KEYCHAIN">
+        <permission platform="iOS" info="com.coracle.demo"/>
+        <permission platform="iOS" info="com.coracle.debug"/>
+    </config>
+    <config desc="privacyConfig" type="AUTHORITY">
+        <permission platform="iOS" info="privacy" type="camera">
+            <string>录制视频需要使用摄像头</string>
+        </permission>
+        <permission platform="iOS" info="privacy" type="microphone">
+            <string>录制视频需要使用麦克风</string>
+        </permission>
+    </config>
+</widget>
