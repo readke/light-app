@@ -1,0 +1,26 @@
+{
+  "status": true,
+  "/api/v1/work/getDetail": {
+    "status" : true,
+    "errorCode" : "",
+    "errorMessage" : "",
+    "detail" : {
+      "id" : 1,
+      "loginName" : "caixue",
+      "userName" : "蔡雪",
+      "image" : "",
+      "publishDate" : "08-10 17:46",
+      "month" : "",
+      "day" : "",
+      "content" : "测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？\n？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字\n？？？？测试一长段文字？？？？测试一长段文字？\n\n加上\n？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？测试一长段文字？？？？",
+      "isClick" : false,
+      "isCollect" : false,
+      "mchlId" : "",
+      "isDelete" : true,
+      "attrs" : "",
+      "attrList" : [ ],
+      "clickList" : [ ],
+      "commmentList" : [ ]
+    }
+  }
+}

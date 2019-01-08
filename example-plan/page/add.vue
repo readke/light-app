@@ -45,7 +45,7 @@ export default {
           inputType: 'date',
           value: corJS.getDate(1)
         },
-        excutePlanInfo: {
+        dangeContent: {
           required: true,
           name: '风险点',
           rows: '4',
@@ -89,44 +89,30 @@ export default {
       // let result = this.$refs.formRefs.validAndData('save');
       let sta = this.$refs.formRefs.getFieldValue('status');
       console.log(sta);
-      let result = false;
-      this.$router.back(-1);
+      let result = true;
+      console.log('store=>', this.$store.state.count);
       if (result) {
         // this.$messagebox.alert('验证成功', '提示');
         // let taskPerson = this.$refs.formRefs.getFieldValue('taskPerson');
-        let taskPerson = corJS.val('taskPerson');
+        let taskPerson = this.$refs.formRefs.getFieldValue('taskPerson');
         console.log(taskPerson);
+        // let dangeId = new Date().getTime();
         let startDate = this.$refs.formRefs.getFieldValue('startDate');
         let endDate = this.$refs.formRefs.getFieldValue('endDate');
-        let excutePlanInfo = this.$refs.formRefs.getFieldValue(
-          'excutePlanInfo'
-        );
+        let dangeContent = this.$refs.formRefs.getFieldValue('dangeContent');
         let status = this.$refs.formRefs.getFieldValue('status');
-        let me = this;
-
-        corNative.requestAjax(
-          {
-            url: 'http://172.18.8.18/mpm/api/v3/crm/saveExcutePlan',
-            // url:'http://pactera.com/express/report/myList.do',
-            method: 'post',
-            data: {
-              mid: 'EAFAA319E74A53774BD52C36F1B3526A%3AFG%3D1',
-              taskPerson: taskPerson,
-              excutePlanInfo: excutePlanInfo,
-              startDate: startDate,
-              endDate: endDate,
-              status: status
-            }
-          },
-          function(data) {
-            console.log(data);
-            if (data.code === 0) {
-              alert('操作成功');
-            }
-            me.list = data.data && data.data.news;
-            // console.log(data)
-          }
-        );
+        if (!status) {
+          status = false;
+        }
+        this.$store.commit('cList', {
+          'dangeId': 1,
+          'taskPerson': taskPerson,
+          'startDate': startDate,
+          'endDate': endDate,
+          'dangeContent': dangeContent,
+          'status': status
+        });
+        this.$router.back(-1);
       }
     },
     // 获取登陆信息(同步)

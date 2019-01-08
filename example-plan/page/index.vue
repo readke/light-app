@@ -1,9 +1,3 @@
-import { Calendar } from 'coui';
-import { isContext } from 'vm';
-import { Popup } from 'coui';
-import list.vue from '/list/list.vue'
-Vue.component(Popup.name, Popup);
-Vue.component(Calendar.name, Calendar);
 <template>
 <div class='page-cell'>
   <co-header title='工作日报'>

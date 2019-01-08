@@ -32,11 +32,15 @@ corJS.ready(function() { // eslint-disable-line
     router,
     store: new Vuex.Store({
       state: {
-        count: 0
+        count: 0,
+        list: []
       },
       mutations: {
         increment(state) {
           state.count++;
+        },
+        cList(state, value) {
+          state.list.push(value);
         }
       },
       modules: {
